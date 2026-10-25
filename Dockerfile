@@ -54,4 +54,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 EXPOSE 3425 3430
 
 ENTRYPOINT ["/magpie"]
-CMD ["serve"]
+CMD ["web", "--addr", "0.0.0.0:3425", "--no-open"]
